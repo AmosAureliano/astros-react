@@ -4,13 +4,14 @@ import Asteroid from '../../components/Asteroid';
 import { useEffect, useState } from 'react';
 
 function Home(){
-    //const listOfElements = [];
+
     const [asteroids, setAsteroids] = useState([]);
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
     const listOfElements = [];
     const apiKey = process.env.REACT_APP_NASA_API_KEY;
 
+    //Teste Retorno API
     useEffect(() => {
         api.get(`feed?start_date=2021-08-16&end_date=2021-08-17&api_key=${apiKey}`).then(({data}) => { 
             setAsteroids(data.near_earth_objects);
@@ -18,7 +19,14 @@ function Home(){
         })
     },[]);
     
-    
+    for(var item in asteroids){
+        for(var element in asteroids[item]){
+            listOfElements.push(asteroids[item][element])
+        }
+    }
+
+    //Teste retorno Por data dinâmica
+
     /*
     function iterator(){
         for(var item in asteroids){
@@ -28,11 +36,7 @@ function Home(){
         }
     }*/
     
-    for(var item in asteroids){
-        for(var element in asteroids[item]){
-            listOfElements.push(asteroids[item][element])
-        }
-    }
+    
     
     /*
     function requestByDate(startDate, endDate){
