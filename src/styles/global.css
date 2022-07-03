@@ -1,0 +1,21 @@
+/* GLOBAL & RESET*/
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    outline-style: none;
+}
+:root{
+    --primary-color: #130F15;
+    --secondary-color: #FAED24;
+    --white: #FFFFFF;
+    --background-secondary: #052841;
+}
+body{
+    font: 400 1rem 'Poppins', sans-serif;
+    color: var(--secondary-color);
+    background: url('https://images.unsplash.com/photo-1596501047855-55aa4c266e96?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
