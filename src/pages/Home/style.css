@@ -1,21 +1,47 @@
-.title{
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.title {
     font-weight: 600;
     text-align: center;
 }
-.title span{
+.title span {
     color: var(--white);
 }
-.description{
+
+.description {
     font-weight: 600;
     margin-top: 2rem;
     text-align: center;
     color: var(--white);
 }
-label{
+
+label {
     color: var(--white);
 }
+.input {
+    display: flex;
+    flex-direction: column;
+}
+.input input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+.input input::placeholder {
+    font-size: 5rem;
+}
 
-.btn{
+.btn {
     padding: 0.7rem;
     border-radius: 4px;
     font-size: 1rem;
@@ -26,60 +52,27 @@ label{
     transition: color .5s;
     cursor: pointer;
 }
-.btn:hover, .btn:active{
+.btn:hover, .btn:active {
     background-color: var(--background-secondary);
     color: var(--white);
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-.input{
-    display: flex;
-    flex-direction: column;
-}
-.input input{
-    padding: 0.5rem;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-}
-.input input::placeholder{
-    font-size: 5rem;
-}
-h1{
-    font-size: 2.5rem;
-}
-/*---LAYOUT---*/
+
 #see-all-button {
     margin-top: 1rem;
 }
-.form{
+.form {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
 }
 
-.list{
+.list {
     margin-top: 4rem;
 }
-.accordion-item{
-    margin-bottom: 2rem;
-}
-.accordion-header h3{
-    color: var(--primary-color);
-}
-.accordion-body p{
-    color: var(--primary-color);
-}
-.accordion p{
-    color: var(--primary-color);
-}
 
-@media(max-width: 900px){
-    .container{
+
+@media(max-width: 900px) {
+    .container {
         padding: 0 2rem;
     }
 }
